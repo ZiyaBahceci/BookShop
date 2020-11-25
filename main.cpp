@@ -22,12 +22,16 @@ struct Book
 
 int main()
 {
-    Date dt[10];
-    Book books[10];
+    int BookCount;
+    std::cout << "Please enter book amount: ";
+    std::cin >> BookCount;
+
+    Date dt[BookCount];
+    Book books[BookCount];
     int enter;
 
-        std::cout << "Please enter details for 10 books. " <<std::endl;
-        for(int i = 0; i < 10; i++)
+        std::cout << "Please enter details for " << BookCount << " books. " <<std::endl;
+        for(int i = 0; i < BookCount; i++)
         {
             std::cout << "Book " << i + 1 << ":" << std::endl;
             std::cout << "Enter date in D.M.Y format: ";
@@ -47,7 +51,7 @@ int main()
         }
 
         int a = 0;
-        while(a < 10)
+        while(a < BookCount)
         {
             std::cout << "Book " << a << " release date: " << dt[a].day << "." << dt[a].month << "." << dt[a].year << " . ID: "
             << books[a].ID << ". name: " << books[a].Name << ". Author: " << books[a].Author << ". Category: " << books[a].Category
